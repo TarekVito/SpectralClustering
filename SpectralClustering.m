@@ -23,7 +23,7 @@ for i=1:sz
 end
 
 L = D - affinity;
-[eigVec, eigVal] = eigs( inv(D) * L);
+[eigVec, eigVal] = eig( inv(D) * L);
 
 cEigVal =  circshift(diag(eigVal),1);
 [~, idx] = max(cEigVal - diag(eigVal));
